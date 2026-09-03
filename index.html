@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PSIT Student Portal — Attendance</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+ <div class="navin">
+  <div class="logo"><div class="logo-box">P</div><div>PSIT Student Portal<small>ACADEMIC SERVICES</small></div></div>
+  <div class="links"><a href="#features">Features</a><a href="#calculator">Calculator</a><a href="#about">About</a><a class="navbtn" href="#calculator">Check Attendance</a></div>
+ </div>
+</nav>
+
+<section class="hero">
+ <div class="heroin">
+  <div>
+   <div class="eyebrow">PSIT • STUDENT ACADEMIC UTILITY</div>
+   <h1>Know your attendance.<br>Plan smarter.</h1>
+   <p>A simple, professional attendance tool for students who want to know exactly where they stand — before an absence becomes a problem.</p>
+   <div class="actions"><a class="primary" href="#calculator">Calculate My Attendance →</a><a class="secondary" href="#features">Explore Features</a></div>
+   <div class="trust"><div><b>100%</b>Browser based</div><div><b>0</b>Data uploads</div><div><b>Instant</b>Calculation</div></div>
+  </div>
+
+  <div class="preview">
+   <div class="window">
+    <div class="window-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="window-title">attendance.psit.local</span></div>
+    <div class="preview-body">
+     <div class="mini-label">ATTENDANCE OVERVIEW</div>
+     <div class="mini-title">Your Current Standing</div>
+     <div class="mini-grid">
+      <div class="mini-card"><span>TOTAL LECTURES</span><strong id="pt">50</strong></div>
+      <div class="mini-card"><span>TOTAL ABSENT</span><strong id="pa">8</strong></div>
+     </div>
+     <div class="mini-score"><div><div class="mini-label">ABSENT − OAA</div><div class="score-num" id="pp">6</div></div><div class="pill">OAA ADJUSTED</div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="features">
+ <div class="center">
+  <div class="section-label">BUILT FOR STUDENTS</div>
+  <h2>Everything you actually need</h2>
+  <p class="section-intro">No unnecessary charts, accounts or complicated settings. Just the information that helps you make a decision.</p>
+ </div>
+ <div class="features">
+  <article class="feature"><div class="icon">%</div><h3>Accurate Percentage</h3><p>Instantly calculate your current attendance from attended and conducted classes.</p></article>
+  <article class="feature"><div class="icon">✓</div><h3>Target Check</h3><p>Compare your attendance against the minimum percentage you need to maintain.</p></article>
+  <article class="feature"><div class="icon">→</div><h3>Absence Planning</h3><p>See how many classes you can miss or how many you need to attend to recover.</p></article>
+ </div>
+</section>
+
+<section class="calculator" id="calculator">
+ <div class="calc-inner">
+  <div class="calc-copy">
+   <div class="section-label">ATTENDANCE CHECK</div>
+   <h2>Calculate your standing.</h2>
+   <p>Enter the numbers from your current attendance record. The result is calculated locally in your browser.</p>
+   <p style="font-size:11px">Your official college attendance record remains the authoritative source.</p>
+  </div>
+  <div class="calc-card">
+   <div class="fields">
+    <div><label>TOTAL LECTURES</label><div class="input"><input id="t" type="number" value="50" min="1"><span class="unit">LECTURES</span></div></div>
+    <div><label>TOTAL ABSENT</label><div class="input"><input id="abs" type="number" value="8" min="0"><span class="unit">LECTURES</span></div></div>
+    <div class="field"><label>OAA</label><div class="input"><input id="oaa" type="number" value="2" min="0"><span class="unit">LECTURES</span></div></div>
+    <div class="field"><label>TARGET ATTENDANCE</label><div class="input"><input id="target" type="number" value="75" min="1" max="100" step=".1"><span class="unit">%</span></div></div>
+   </div>
+
+   <div class="summary-grid">
+    <div class="summary-item"><span>TOTAL LECTURES</span><strong id="stotal">50</strong></div>
+    <div class="summary-item"><span>TOTAL ABSENT</span><strong id="sabs">8</strong></div>
+    <div class="summary-item"><span>OAA</span><strong id="soaa">2</strong></div>
+    <div class="summary-item highlight"><span>ABSENT − OAA</span><strong id="remaining">6</strong></div>
+   </div>
+
+   <button class="calcbtn" onclick="calc()">Calculate Attendance</button>
+   <div class="result" id="result"></div><div class="planning" id="planning"></div>
+  </div>
+ </div>
+</section>
+
+<footer id="about">PSIT Student Attendance Utility • Local browser calculation • No personal attendance data is stored or uploaded.</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
